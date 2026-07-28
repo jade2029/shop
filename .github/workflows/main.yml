@@ -16,5 +16,5 @@ jobs:
     - name: Upload Jar Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: eagler-shop-jar
+        name: Cool-shop-jar
         path: target/*jar-with-dependencies.jar
