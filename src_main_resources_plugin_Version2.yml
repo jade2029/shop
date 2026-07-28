@@ -1,0 +1,33 @@
+name: EaglerShop
+main: com.eaglershop.EaglerShop
+version: 1.0.0
+api-version: 1.8
+author: Copilot
+commands:
+  shop:
+    description: Open the shop GUI or use subcommands (buy/sell/price)
+    usage: /shop
+  shopadmin:
+    description: Admin commands for shop (reload/additem/removeitem/setprice/resetstats/forcedelivery)
+    usage: /shopadmin
+  ah:
+    description: Auction house (list/create/bid/buy/claim/cancel)
+    usage: /ah
+  ahadmin:
+    description: Admin commands for auction house
+    usage: /ahadmin
+permissions:
+  eagler.shop.use:
+    description: Use the shop GUI
+    default: true
+  eagler.shop.buy: { default: true }
+  eagler.shop.sell: { default: false }
+  eagler.shop.price.view: { default: true }
+  eagler.shop.reload: { default: op }
+  eagler.shop.admin: { default: op }
+  eagler.ah.use: { default: true }
+  eagler.ah.list: { default: false }
+  eagler.ah.bid: { default: true }
+  eagler.ah.buy: { default: true }
+  eagler.ah.claim: { default: true }
+  eagler.ah.admin: { default: op }

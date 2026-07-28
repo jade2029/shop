@@ -1,0 +1,79 @@
+# EaglerShop configuration file
+# Read the README for usage examples. You can change many values and use /shopadmin reload to apply.
+
+general:
+  # Use Vault for economy/permissions. REQUIRED for money transfers.
+  use-vault: true
+
+# Supply & Demand configuration
+supply-demand:
+  # How many percent counters decay per day (reduces inflation over time).
+  decay-per-day: 5.0
+  # Elasticity scale: how strongly counters change price per counter difference.
+  elasticity: 0.05
+  # Default base price used when an item has no explicit rule.
+  defaults:
+    base-price: 100.0
+
+# Enchant valuation table
+enchant-valuation:
+  defaults:
+    per-level-percent: 2.0
+  enchants:
+    SHARPNESS:
+      levels:
+        1: 5.0
+        2: 10.0
+        3: 15.0
+        4: 25.0
+        5: 40.0
+    UNBREAKING:
+      levels:
+        1: 3.0
+        2: 6.0
+        3: 12.0
+    MENDING:
+      levels:
+        1: 40.0
+    BINDING_CURSE:
+      levels:
+        1: -20.0
+    VANISHING_CURSE:
+      levels:
+        1: -10.0
+
+# Rank-based price modifiers. Values are percents: positive = discount (lower price), negative = penalty
+ranks:
+  default:
+    price-modifier: 0.0
+  doner:
+    price-modifier: 5.0
+  mod:
+    price-modifier: 10.0
+  admin:
+    price-modifier: 15.0
+  owner:
+    price-modifier: 20.0
+
+# Auctions
+auctions:
+  enable-buyitnow: true
+  default-duration-seconds: 86400 # 24 hours
+  listing-fee-percent: 5.0
+  sale-tax-percent: 2.0
+  auto-delivery: true
+  default-start-price: 10.0
+
+# GUI options
+gui:
+  shop-size: 36
+  auction-size: 36
+
+# Persistence options
+persistence:
+  type: yaml # yaml or sqlite (sqlite is optional; code contains placeholders)
+  sqlite-file: auctions.db
+
+debug: false
+
+# End of config.yml - see README.md for more explanations and examples.
